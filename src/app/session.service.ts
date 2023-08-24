@@ -1,24 +1,32 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SessionService {
+  private inputData: string = '';
 
-  constructor() { }
-
-  setItem(key: string, value: string): void {
-    localStorage.setItem(key, value);
+  setInputData(data: string): void {
+    console.log('setting data', data);
+    this.inputData = data;
   }
 
-  getItem(key: string): string | null {
-    return localStorage.getItem(key);
+  getInputData(): string {
+    console.log('getting data', this.inputData);
+
+    return this.inputData;
   }
+  constructor() {}
 
+  // setItem(key: string, value: string): void {
+  //   localStorage.setItem(key, value);
+  // }
 
-  clear(): void {
-    localStorage.clear();
-  }
+  // getItem(key: string): string | null {
+  //   return localStorage.getItem(key);
+  // }
 
-  
+  // clear(): void {
+  //   localStorage.clear();
+  // }
 }
