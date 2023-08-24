@@ -1,0 +1,46 @@
+<section class="bg-blue">
+    <div class="margin-left col-md-6 col-lg-4 col-xl-3">
+        <div>
+            <div class="login-img">
+                <img class="img-fluid" src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2023/8/19/16179c9c-a3a5-4453-9fe3-fd99697782221692384110050-Flat-300_1800-x-721.jpg" alt="login-img">
+            </div>
+            <div class="login-sec p-4">
+                <div>
+                    <h5>Login <span class="fs-6 text-secondary">or</span> Signup</h5>
+                </div>
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="input-group mt-4">
+                    <div class="form-group">
+                        <input  
+                        minlength="10"
+                        maxlength="10" 
+                        type="tel" 
+                        placeholder=" Mobile Number *"
+                        class="form-control"
+                        name="contactNo"
+                        formControlName="contactNo"
+                        [ngClass]="{ 'is-invalid' : contactNo.touched && contactNo.invalid }"
+                        />
+                    </div>
+                    
+                </form>
+                <div class="fs-small" *ngIf="contactNo.touched && contactNo.invalid">
+                    <div *ngIf="contactNo.errors.required">Please Enter Valid Mobile Number(10 digits)</div>
+                    <div *ngIf="contactNo.errors.minlength">
+                      Please Enter Valid Mobile Number(10 digits)
+                    </div>
+                </div> 
+                <div class="mt-4">
+                    <div class="fs-small">
+                        <p class="text-secondary">By continuing, I agree to the <span><a href="https://www.myntra.com/termsofuse">Terms of Use</a></span> & <span><a href="https://www.myntra.com/privacypolicy" >Privacy Policy</a></span></p>
+                    </div>
+                    <div class="button text-center"> 
+                        <button [disabled]="loginForm.invalid" (click)="goToOtp()" type="submit" class="btn btn-secondary text-uppercase fw-bold">continue</button>
+                    </div>
+                    <div class="get-help mt-4">
+                        <p class=" text-secondary">Have trouble logging in? <span><a href="#" >Get Help</a></span></p>
+                    </div>
+                </div>
+            </div>  
+        </div>      
+    </div>
+</section>

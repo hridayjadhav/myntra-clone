@@ -1,0 +1,46 @@
+<section class="bg-blue">
+    <div class="margin-left  col-md-6 col-lg-4 col-xl-3">
+        <div class="otp-page mt-5">
+            <div class="otp-img">
+                <img class="img-fluid" src="https://constant.myntassets.com/pwa/assets/img/3a438cb4-c9bf-4316-b60c-c63e40a1a96d1548071106233-mobile-verification.jpg" alt="otp-img">
+            </div>
+            <div class="otp-sec p-4">
+                <div>
+                    <h5>Verify with OTP</h5>
+                </div>
+                <div class="fs-small">
+                    Sent to <span>9689516884</span>
+                </div>
+                <form class="input-group mt-4">
+                    <input  
+                    minlength="4"
+                    maxlength="4" 
+                    type="text" 
+                    class="form-control"
+                    name="otpNo"
+                    formControlName="otpNo"
+                    >  
+                    <div class="button mt-3 text-center">
+                        <button type="submit" (click)="goToOtp()"  class="btn btn-secondary text-uppercase fw-bold">Log In</button>
+                    </div>
+                </form>
+                <div class="mt-4">
+                    <div class="otp-timer">
+                        <p class="text-secondary fs-small" *ngIf="num > 0">Resend OTP in <span class="text-dark fw-bold" *ngIf="num > 0">{{this.num}}</span></p>
+                        <a href="#">
+                            <p class="text-secondary fs-small" *ngIf="num === 0  ">Resend the OTP</p>
+                        </a>
+                    </div>
+                    <div class="fs-small">
+                        <p class="text-secondary"><a href="#">Back to Login</a></p>
+                    </div>
+                    <div class="get-help mt-4">
+                        <p class=" text-secondary">Have trouble logging in? <span><a href="#" >Get Help</a></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

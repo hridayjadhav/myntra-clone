@@ -1,0 +1,154 @@
+*{
+    font-family: Assistant,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+@mixin otp-area($color){
+    text-decoration: none;
+    font-weight: 700;
+    color: rgba(0, 0, 0,);
+}
+
+.input-group > .form-control{
+    width: 40%;
+    padding: 6px 38px;
+    margin-left: 81px;
+}
+
+.bg-blue{
+    background: #F4F7F9;
+    height: 100vh;
+    padding-top: 1px;
+}
+.width{
+    width: 25%;
+    padding: 9% 0% 5% 50%;
+}
+
+.fs-small, .get-help{
+    font-size: 11px;
+}
+.otp-sec{
+    background:white;
+}
+.otp-sec a{
+    @include otp-area(blue)
+}
+
+.input-group{
+    display: block;
+}
+
+
+.form-control{
+    border-radius: 0% ;
+    border: 1 px solid black ;
+    color: rgba(40,44,63,.8);
+    padding: 0 75px;
+    box-shadow: 0px 0px 4px -4px;
+    font-size: 13px;
+}
+.form-control.is-invalid{
+    color: rgba(40,44,63,.8);
+}
+.btn {
+    border-radius: 0px;
+    font-size: 13px;
+}
+.otp-page{
+    box-shadow: 0px 0px 20px -12px;
+}
+.otp-sec h5{
+    font-weight: 600;
+    color: rgba(40,44,63,.8);
+}
+.otp-sec .fs-s{
+    font-size: 9px;
+    color: red;
+}
+
+.otp-img img{
+    width: 33%;
+}
+.otp-img{
+    background-color: white;
+    padding: 21px 0px 0px 11px;
+}
+
+@media (min-width:480px){
+    .input-group input[type="tel"]{
+        font-size: 16px;
+    }
+    .input-group > .form-control{
+        width: 64%;
+        padding: 7px 120px;
+        margin-left: 78px;
+    }
+    .btn {
+        border-radius: 0px;
+        font-size: 13px;
+        padding: 7px 116px;
+    }
+}
+
+@media (min-width:768px){
+    .bg-blue{
+        padding-top: 25px;
+    }
+    .margin-left{
+        margin-left: 182px;
+    
+    }
+    .input-group > .form-control{
+        padding: 7px 90px;
+        margin-left: 60px;
+    }
+    .btn{
+        padding: 7px 85px;
+    }
+    
+}
+@media (min-width:992px){
+    .bg-blue{
+        padding-top: 45px;
+    }
+    .margin-left{
+        margin-left: 332px;
+    }
+    .input-group > .form-control{
+        width: 76%;
+        padding: 7px 90px;
+        margin-left: 34px;
+    }
+    
+}
+@media (min-width:1200px){
+    .margin-left{
+        margin-left: 437px;
+    }
+    .input-group > .form-control{
+        width: 86%;
+        padding: 7px 93px;
+        margin-left: 18px;
+    }
+    
+}
+@media (min-width:1366px){
+    .margin-left{
+        margin-left: 517px;
+    }
+    .input-group input[type="tel"]{
+        font-size: 16px;
+    }
+    .btn{
+        padding: 7px 102px;
+    }
+    .input-group > .form-control{
+        padding: 7px 104px;
+    }
+    .input-group > .form-control{
+        margin-left: 19px;
+    }
+}
+
+
+
