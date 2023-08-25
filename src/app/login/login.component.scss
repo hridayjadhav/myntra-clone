@@ -1,4 +1,5 @@
 @import '../variables/variables';
+@import '../commonstyles/commonstyles.scss';
 
 @mixin login-area($color){
     text-decoration: none;
@@ -7,20 +8,18 @@
 }
 
 .bg-blue{
-    background: $bg-blue;
-    height: 100vh;
+    @extend .bg-blue;
     padding-top: 33px;
 }
 .width{
-    width: 25%;
-    padding: 9% 0% 5% 50%;
+    @extend .width;
 }
 
 .fs-small, .get-help{
-    font-size: 11px;
+    @extend .fs-small-get-help;
 }
 .login-sec{
-    background: $white;
+    @extend .secs;
 }
 .login-sec a{
     @include login-area(blue)
@@ -64,15 +63,13 @@
     font-size: 12px;
 }
 .login-page{
-    box-shadow: 0px 0px 20px -12px;
+    @extend .page-box-shadow;
 }
 .login-sec h5{
-    font-weight: 600;
-    color: rgba(40,44,63,.8);
+    @extend .h5;
 }
 .login-sec .fs-s{
-    font-size: 9px;
-    color: $red;
+    @extend .fs-s;
 }
 
 @media (min-width:480px){

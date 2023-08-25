@@ -1,5 +1,7 @@
 
 @import '../variables/variables';
+@import '../commonstyles/commonstyles.scss';
+
 @mixin otp-area($color){
     text-decoration: none;
     font-weight: 700;
@@ -13,20 +15,18 @@
 }
 
 .bg-blue{
-    background: $bg-blue;
-    height: 100vh;
+    @extend .bg-blue;
     padding-top: 1px;
 }
 .width{
-    width: 25%;
-    padding: 9% 0% 5% 50%;
+    @extend .width;
 }
 
 .fs-small, .get-help{
-    font-size: 11px;
+    @extend .fs-small-get-help;
 }
 .otp-sec{
-    background: $white;
+    @extend .secs;
 }
 .otp-sec a{
     @include otp-area(blue)
@@ -53,15 +53,13 @@
     font-size: $fs-13;
 }
 .otp-page{
-    box-shadow: 0px 0px 20px -12px;
+    @extend .page-box-shadow;
 }
-.otp-sec h5{
-    font-weight: 600;
-    color: $text-color;
+.otp-sec h5{    
+    @extend .h5;
 }
 .otp-sec .fs-s{
-    font-size: 9px;
-    color: $red;
+    @extend .fs-s;
 }
 
 .otp-img img{
