@@ -1,11 +1,9 @@
-*{
-    font-family: Assistant,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-}
 
+@import '../variables/variables';
 @mixin otp-area($color){
     text-decoration: none;
     font-weight: 700;
-    color: rgba(0, 0, 0,);
+    color: $black;
 }
 
 .input-group > .form-control{
@@ -15,7 +13,7 @@
 }
 
 .bg-blue{
-    background: #F4F7F9;
+    background: $bg-blue;
     height: 100vh;
     padding-top: 1px;
 }
@@ -28,7 +26,7 @@
     font-size: 11px;
 }
 .otp-sec{
-    background:white;
+    background: $white;
 }
 .otp-sec a{
     @include otp-area(blue)
@@ -41,36 +39,36 @@
 
 .form-control{
     border-radius: 0% ;
-    border: 1 px solid black ;
-    color: rgba(40,44,63,.8);
+    border: 1 px solid $black ;
+    color: $text-color;
     padding: 0 75px;
     box-shadow: 0px 0px 4px -4px;
-    font-size: 13px;
+    font-size: $fs-13;
 }
 .form-control.is-invalid{
-    color: rgba(40,44,63,.8);
+    color: $text-color;
 }
 .btn {
     border-radius: 0px;
-    font-size: 13px;
+    font-size: $fs-13;
 }
 .otp-page{
     box-shadow: 0px 0px 20px -12px;
 }
 .otp-sec h5{
     font-weight: 600;
-    color: rgba(40,44,63,.8);
+    color: $text-color;
 }
 .otp-sec .fs-s{
     font-size: 9px;
-    color: red;
+    color: $red;
 }
 
 .otp-img img{
     width: 33%;
 }
 .otp-img{
-    background-color: white;
+    background-color: $white;
     padding: 21px 0px 0px 11px;
 }
 
@@ -85,7 +83,7 @@
     }
     .btn {
         border-radius: 0px;
-        font-size: 13px;
+        font-size: $fs-13;
         padding: 7px 116px;
     }
 }

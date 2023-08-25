@@ -14,21 +14,17 @@
         </div>
         <form
           [formGroup]="loginForm"
-          (ngSubmit)="onSubmit()"
+          (ngSubmit)="onSubmitForm()"
           class="input-group mt-4"
         >
           <div class="form-group">
             <input
-              minlength="10"
-              maxlength="10"
               type="tel"
               placeholder=" Mobile Number *"
               class="form-control"
               name="contactNo"
               formControlName="contactNo"
-              [ngClass]="{
-                'is-invalid': contactNo.touched && contactNo.invalid
-              }"
+              [ngClass]="{'is-invalid': contactNo.touched && contactNo.invalid }"
             />
           </div>
         </form>

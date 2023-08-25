@@ -8,7 +8,7 @@
           alt="otp-img"
         />
       </div>
-      <div class="otp-sec p-4">
+      <div class="otp-sec px-4 py-2">
         <div>
           <h5>Verify with OTP</h5>
         </div>
@@ -19,8 +19,6 @@
           class="input-group mt-4"
         >
           <input
-            minlength="4"
-            maxlength="4"
             type="text"
             class="form-control"
             name="otpNo"
@@ -29,12 +27,13 @@
           />
           <div class="fs-small ms-4" *ngIf="otpNo.touched && otpNo.invalid">
             <div *ngIf="otpNo.errors.required">Please enter valid OTP</div>
+            <div *ngIf="otpNo.errors.minlength">OTP should be 4 digits</div>
           </div>
 
           <div class="button mt-3 text-center">
             <button
               [disabled]="otpForm.invalid"
-              type="submit"
+              type="button"
               (click)="goToOtp()"
               class="btn btn-secondary text-uppercase fw-bold"
             >
@@ -44,8 +43,8 @@
         </form>
         <div class="mt-4">
           <div class="otp-timer">
-            <p class="text-secondary fs-small" *ngIf="num > 0">
-              Resend OTP in
+            <p class="text-secondary fs-small" *ngIf="num > 0">     <!-- jab tak num ki value greater than 0 hai, tab tak hi ye block dikhega -->
+               Resend OTP in 
               <span class="text-dark fw-bold" *ngIf="num > 0">{{
                 this.num
               }}</span>

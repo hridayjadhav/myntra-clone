@@ -14,18 +14,19 @@ import { SessionService } from '../session.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+  
   loginForm: any;
-  // public loginForm! : FormGroup;
 
   constructor(
     private fb: FormBuilder,
     private router: Router,
     private sessionService: SessionService
-  ) {
+  ) {  }
+
+  ngOnInit(): void {
     this.loginForm = new FormGroup({
       contactNo: new FormControl('', [
         Validators.required,
-        // Validators.pattern(('^[789]\d{9}$')),
         Validators.minLength(10),
         Validators.maxLength(10),
       ]),
@@ -36,17 +37,17 @@ export class LoginComponent implements OnInit {
     return this.loginForm.get('contactNo');
   }
 
-  onSubmit() {
-    // console.log(this.loginForm.value);
-    const inputData = this.loginForm.get('contactNo')?.value;
-    console.log('Input data before setting', inputData);
-
-    this.sessionService.setInputData(inputData);
-    this.goToOtp();
-  }
   goToOtp() {
+    this.sessionService.mobileNo = this.loginForm.get('contactNo').value;    //jo input me value thi usse mobileNo pe assign krdiye. -> otp me jaake mobileNo ko get kiya ( lifecycle hook / constructor )
+    this.router.navigate(['/otp']);    
+  }
+
+  onSubmitForm(){
     this.router.navigate(['/otp']);
   }
 
-  ngOnInit(): void {}
+  
+
+
+  
 }
