@@ -35,8 +35,10 @@
   box-shadow: 0px 0px 6px -3px;
   font-size: $fs-13;
 }
+
 .input-group input[type="tel"]::placeholder{
     font-size: $fs-13;
+    color: red;
 }
 
 .input-group::before {

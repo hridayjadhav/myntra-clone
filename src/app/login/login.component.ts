@@ -8,6 +8,7 @@ import {
 import { Router } from '@angular/router';
 import { SessionService } from '../session.service';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -24,13 +25,19 @@ export class LoginComponent implements OnInit {
   ) {  }
 
   ngOnInit(): void {
-    this.loginForm = new FormGroup({
-      contactNo: new FormControl('', [
+    this.loginForm = this.fb.group({
+      contactNo: ['', [
         Validators.required,
         Validators.minLength(10),
-        Validators.maxLength(10),
-      ]),
+        Validators.maxLength(10)
+      ]]
     });
+  }
+
+  limit(){
+    if(this.contactNo.value && this.contactNo.value.length > 10){
+      this.contactNo.setValue(this.contactNo.value.slice(0, 10));
+    }
   }
 
   get contactNo() {
@@ -46,8 +53,16 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/otp']);
   }
 
+
+  
+
   
 
 
   
 }
+// document.querySelectorAll('input[type="tel"]').forEach(input =>{
+//   input.oninput = () => {
+//     if(input.value.length > input.maxLength) input.value = input.value.slice(0, input.maxLength);
+//   };
+// })

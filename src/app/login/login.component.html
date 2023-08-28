@@ -18,12 +18,14 @@
           class="input-group mt-4"
         >
           <div class="form-group">
+            <!-- We use the (input) event binding in Angular to listen for input changes within an HTML input element. -->
             <input
               type="tel"
               placeholder=" Mobile Number *"
               class="form-control"
               name="contactNo"
               formControlName="contactNo"
+              (input)="limit()"
               [ngClass]="{'is-invalid': contactNo.touched && contactNo.invalid }"
             />
           </div>
