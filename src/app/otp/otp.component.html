@@ -23,6 +23,7 @@
             class="form-control"
             name="otpNo"
             formControlName="otpNo"
+            (input)="limit()"
             [ngClass]="{ 'is-invalid': otpNo.touched && otpNo.invalid }"
           />
           <div class="fs-small ms-4" *ngIf="otpNo.touched && otpNo.invalid">

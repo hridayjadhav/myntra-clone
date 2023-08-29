@@ -45,8 +45,10 @@ export class LoginComponent implements OnInit {
   }
 
   goToOtp() {
-    this.sessionService.mobileNo = this.loginForm.get('contactNo').value;    //jo input me value thi usse mobileNo pe assign krdiye. -> otp me jaake mobileNo ko get kiya ( lifecycle hook / constructor )
-    this.router.navigate(['/otp']);    
+    // this.sessionService.mobileNo = this.loginForm.get('contactNo').value;    //jo input me value thi usse mobileNo pe assign krdiye. -> otp me jaake mobileNo ko get kiya ( lifecycle hook / constructor )
+    const mobileNo = this.loginForm.get('contactNo').value;
+    this.router.navigate(['/otp', mobileNo]);    
+
   }
 
   onSubmitForm(){

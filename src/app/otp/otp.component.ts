@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import {
   FormBuilder,
   FormGroup,
@@ -16,13 +16,14 @@ import { SessionService } from '../session.service';
 export class OtpComponent implements OnInit, OnDestroy {
   num = 10;
   interval: any;
-  inputData: string = '';    //emtry string pass kiya kyuki value fetch krega 
+  inputData: any = '';    //emtry string pass kiya kyuki value fetch krega 
   otpForm: any;
 
   constructor(
     private router: Router,
     private fb: FormBuilder,
-    private sessionService: SessionService
+    private sessionService: SessionService,
+    private route : ActivatedRoute
   ) {                                             //jab b form load hoga to sbse pehle ye execute hoga isliye hum ise use krte hai.
     this.otpForm = new FormGroup({     
       otpNo: new FormControl('', [     
@@ -34,13 +35,21 @@ export class OtpComponent implements OnInit, OnDestroy {
     });
     console.log(this.otpForm);
   }
+  limit(){
+    if(this.otpNo.value && this.otpNo.value.length > 4){    
+      this.otpNo.setValue(this.otpNo.value.slice(0, 4));    
+    }
+  }
 
   get otpNo() {
     return this.otpForm.get('otpNo');   //  input ka pura data including validation wo return krega.
   }
 
   ngOnInit(): void {
-    this.inputData = this.sessionService.mobileNo;    // empty string jo define kiya use this. se bulake usme mobileNo ki value daaldiye. this is normal variable thats why we didn't used .value method.
+    // this.inputData = this.sessionService.mobileNo;    // empty string jo define kiya use this. se bulake usme mobileNo ki value daaldiye. this is normal variable thats why we didn't used .value method.
+    this.route.paramMap.subscribe(params => {
+      this.inputData = params.get('mobileNo')
+    })
     this.interval = setInterval(() => this.numDecrement(this.num), 1000);
   }
 

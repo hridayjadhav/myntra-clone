@@ -7,7 +7,7 @@ import { HomescreenComponent } from './homescreen/homescreen.component';
 const routes: Routes = [
   {path:'',redirectTo:'/login',pathMatch:'full'},    // if there is nothing in 4200 so it will  auto redirect to login.
   {path:'login', component: LoginComponent},
-  {path:'otp', component: OtpComponent},
+  {path:'otp/:mobileNo', component: OtpComponent},
   {path:'homescreen', component: HomescreenComponent},
 
 ];
