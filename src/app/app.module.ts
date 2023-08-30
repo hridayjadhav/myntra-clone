@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { OtpComponent } from './otp/otp.component';
 import { HomescreenComponent } from './homescreen/homescreen.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     LoginComponent,
     OtpComponent,
     HomescreenComponent,
-    NavbarComponent
+    NavbarComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,
