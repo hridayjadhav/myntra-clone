@@ -1,4 +1,7 @@
 @import "../variables/variables";
+*{
+    font-family: $font-family;
+}
 .main{
     margin-top: 140px;
 }

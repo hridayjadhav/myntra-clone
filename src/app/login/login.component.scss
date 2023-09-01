@@ -6,6 +6,9 @@
     font-weight: 700;
     color: $black;
 }
+*{
+    font-family: $font-family;
+}
 
 .bg-blue{
     @extend .bg-blue;
@@ -40,6 +43,15 @@
     font-size: $fs-13;
     color: $text-color;
 }
+//   .input-group::after {
+//     content: " *";
+//     position: absolute;
+//     left: 146px; 
+//     top: 19%;
+//     font-size: $fs-13;
+//     color: $red;
+//     z-index: 1000;
+//   }
 
 .input-group::before {
   content: "+91 | ";

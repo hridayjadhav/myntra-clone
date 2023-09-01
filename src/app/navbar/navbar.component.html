@@ -8,7 +8,17 @@
       /></a>
     </div>
     <div class="nav-menu col-lg-5 d-none d-lg-flex justify-content-around mt-3">
-      <a href="#">men</a>
+      <div class="dropdown">
+        <a href="#">men</a>
+        <div class="dropdown-content">
+          <ul>
+            <li><a href="#">Shirts</a></li>
+            <li><a href="#">Pants</a></li>
+            <li><a href="#">Shoes</a></li>
+            <li><a href="#">Accessories</a></li>
+          </ul>
+        </div>
+      </div>
       <a href="#">women</a>
       <a href="#">kids</a>
       <a href="#">home & living</a>
@@ -16,25 +26,25 @@
       <a href="#">studio <sup class="text-secondary">new</sup></a>
     </div>
     <div class="searchbar d-none d-lg-flex align-items-center">
-      <i class="fas fa-search"></i>
+      <fa-icon class="ms-lg-3 ms-xl-1 " [icon]="searchIcon"></fa-icon>
       <input
         type="search"
         placeholder="Search for products,brands and more"
       />
     </div>
     <div class="icons col-lg-2 d-none d-lg-flex justify-content-around mt-3">
-      <a href="#"><i class="ms-lg-3 ms-xl-1 far fa-user-circle"></i>Profile</a>
-      <a href="#"> <i class="ms-lg-3 ms-xl-1 far fa-heart"></i> Wishlist</a>
-      <a href="#"> <i class="ms-xl-1 ms-lg-1 fas fa-shopping-bag"></i> Bag</a>
+      <a href="#"><fa-icon  [icon]="userIcon"></fa-icon>Profile</a>
+      <a href="#"><fa-icon  [icon]="heartIcon"></fa-icon>Wishlist</a>
+      <a href="#"><fa-icon  [icon]="bagIcon"></fa-icon>Bag</a>
     </div>
     <div class="d-block d-lg-none">
       <button
-        class="icons btn mt-2 d-lg-none"
+        class="icons btn d-lg-none"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasWithBothOptions"
       >
-        <i class="fs-3 fa-solid fa-bars"></i>
+      <fa-icon class="fs-3"  [icon]="menuIcon"></fa-icon>
       </button>
       <div
         class="offcanvas offcanvas-end"

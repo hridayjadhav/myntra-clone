@@ -1,7 +1,9 @@
 
 @import '../variables/variables';
 @import '../commonstyles/commonstyles.scss';
-
+*{
+    font-family: $font-family;
+}
 @mixin otp-area($color){
     text-decoration: none;
     font-weight: 700;
