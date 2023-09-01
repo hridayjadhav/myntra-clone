@@ -26,6 +26,33 @@ a{
     border-bottom: 4px solid $nav-borderbtm;
 }
 }
+/* Default styles */
+.searchbar {
+    position: relative;
+}
+
+#searchIcon {
+    color: black; /* Default icon color */
+    transition: color 0.3s ease;
+}
+
+#searchInput {
+    color: black; /* Default input text color */
+    border: 1px solid black; /* Default input border color */
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Styles when clicked */
+.clicked #searchIcon {
+    color: red; /* Updated icon color */
+}
+
+.clicked #searchInput {
+    color: red; /* Updated input text color */
+    border-color: red; /* Updated input border color */
+}
+
+
 .searchbar input{
     outline: none;
     background-color: $bg-blue;
@@ -45,6 +72,7 @@ a{
 }
 .offcanvas {
     background-color: $bg-blue;
+    max-width: 70%;
 }
 .offcanvas-title{
     color: $text-color;

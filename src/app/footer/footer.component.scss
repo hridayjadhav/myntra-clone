@@ -1,0 +1,80 @@
+@import "../variables/variables";
+
+.footer {
+    background-color: $bg-blue;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: $footer-ul-text;
+}
+ul a{
+    color: $footer-li-text;   
+}
+.lists .head{
+    font-weight: 700; 
+}
+.lists .head p{
+    font-size: 11px;
+    margin-left: 32px;
+}
+ul a li{
+    padding-bottom: 5px;
+    font-size: 13px;
+}
+.keep-touch-sec img{
+    width: 20px;
+}
+.mar-icon {
+    margin-left: 32px;
+}
+.text-color {
+    color: $footer-li-text;
+}
+.ul-color{
+    color: $footer-ul-text;
+}
+.react-img{
+    width: 27%;
+}
+.m-32{
+    width: 60vw;
+    margin-left: 32px;
+}
+
+@media (min-width:480px){
+    .guarantee-img, .react-img{
+        width: 16vw;
+    }
+    .guarantee-text p, .react-text p{
+        font-size: 16px;
+    }
+}
+@media (min-width:576px){
+    .m-32{
+        width: 35vw;
+    }
+}
+@media (min-width:992px){
+    .m-32{
+        margin-left: 32px;
+        width: 16vw;
+    }
+    .guarantee-img, .react-img{
+        width: 10vw;
+    }
+    .guarantee-text p, .react-text p{
+        font-size: 12px;
+    }
+}
+@media (min-width:1200px){
+    .guarantee-img {
+        width: 6vw;
+    }
+    .react-img{
+        width: 5vw;
+    }
+}

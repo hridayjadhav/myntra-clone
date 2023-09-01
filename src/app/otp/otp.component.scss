@@ -69,6 +69,19 @@
     background-color: $white;
     padding: 21px 0px 0px 11px;
 }
+.otp-timer .cursor{
+    cursor: pointer;
+}
+.btnn{
+    border-radius: 6px;
+    font-size: 12px;
+    background-color: $bg-blue;
+    color: $black;
+}
+.modal-content{
+    background-color: $bg-blue;
+}
+
 
 @media (min-width:480px){
     .input-group input[type="tel"]{
@@ -84,6 +97,28 @@
         font-size: $fs-13;
         padding: 7px 116px;
     }
+    .modal-footer .btnn{
+        border-radius: 6px;
+        font-size: 12px;
+        padding: 7px 30px;
+        background-color: $bg-blue;
+        color: $black;
+    }
+}
+
+@media (min-width:576px){
+    .ms-4 {
+        margin-left: 6.1rem !important;
+      }
+      .input-group > .form-control{
+        width: 64%;
+        padding: 7px 150px;
+        margin-left: 98px;
+    }  
+    .modal-dialog {
+        max-width: 400px;
+        
+      }
 }
 
 @media (min-width:768px){

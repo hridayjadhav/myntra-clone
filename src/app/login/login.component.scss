@@ -38,7 +38,7 @@
 
 .input-group input[type="tel"]::placeholder{
     font-size: $fs-13;
-    color: red;
+    color: $text-color;
 }
 
 .input-group::before {

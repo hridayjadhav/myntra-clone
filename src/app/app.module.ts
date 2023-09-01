@@ -8,6 +8,7 @@ import { OtpComponent } from './otp/otp.component';
 import { HomescreenComponent } from './homescreen/homescreen.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MainComponent } from './main/main.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { MainComponent } from './main/main.component';
     HomescreenComponent,
     NavbarComponent,
     MainComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
